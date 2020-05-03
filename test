@@ -1,2 +1,25 @@
 http://birtgrip.blogspot.com/2012/10/birt-vs-jasper.html
 https://www.slicestoshare.com/jasper-versus-birt/
+
+Standard response code are presented below:
+
+CODE    MEANING
+200     OK
+202     Accepted
+204     OK, No Content returned
+301     Redirect, Moved Permanently
+400     Bad request
+401     Unauthorized
+403     Forbidden
+404     Not found
+405     Method not allowed
+409     Conflict
+429     Too many requests
+500     Internal server error
+
+In addition to the response code, return a valid JSON response containing all of the information necessary to debug the problem.
+
+{"response_code" : "401", 
+"message" : "Verbose, plain language description of the problem with hints about how to fix it."
+"more_info" : "http://developer.Application.opentext.com/someapi/errors/12345",
+"code" : 12345}
