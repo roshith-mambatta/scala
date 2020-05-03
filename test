@@ -34,7 +34,33 @@ Returns Response Body?	Yes
 
 >> Content Server<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
+https://community.jaspersoft.com/documentation/tibco-jasperreports-server-web-services-guide/v62/running-report-asynchronously
+
+async	
+false
+
+Determines whether reportExecution is synchronous or asynchronous. When set to true, the response is sent immediately and the client must poll the report status and later download the result when ready. By default, this property is false and the operation will wait until the report execution is complete, forcing the client to wait as well, but allowing the client to download the report immediately after the response.
 response should be somthing like :
+
+<reportExecutionRequest>
+    <reportUnitUri>/supermart/details/CustomerDetailReport</reportUnitUri>
+    <async>true</async>
+    <freshData>false</freshData>
+    <saveDataSnapshot>false</saveDataSnapshot>
+    <outputFormat>html</outputFormat>
+    <interactive>true</interactive>
+    <ignorePagination>false</ignorePagination>
+    <pages>1-5</pages>
+    <parameters>
+        <reportParameter name="someParameterName">
+            <value>value 1</value>
+            <value>value 2</value>
+        </reportParameter>
+        <reportParameter name="someAnotherParameterName">
+            <value>another value</value>
+        </reportParameter>
+    </parameters>
+</reportExecutionRequest>
 
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <reportExecution>
