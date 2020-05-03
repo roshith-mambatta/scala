@@ -32,4 +32,21 @@ Request Body Required?	Yes
 Returns Response Body?	Yes
 
 
->> Content Server
+>> Content Server<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+response should be somthing like :
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<reportExecution>
+    <exports>
+        <export>
+            <id>33c98001-c0af-41bb-8659-8e44bddc339e</id>
+            <status>queued</status>
+        </export>
+    </exports>
+    <reportURI>/reports/interactive/CustomersReport</reportURI>
+    <requestId>04e91a83-e9ca-4629-bca9-6e5028f5f6be</requestId>
+    <status>queued</status>
+</reportExecution>
+
+and then work with export Id and request id and follow : https://community.jaspersoft.com/documentation/tibco-jasperreports-serve...
