@@ -1,6 +1,15 @@
 http://birtgrip.blogspot.com/2012/10/birt-vs-jasper.html
 https://www.slicestoshare.com/jasper-versus-birt/
 
+Use API to render report
+https://jsreport.net/learn/api
+
+   {
+      "template": { "name" : "my template"  },
+      "data" : { ... },
+      "options": { "reports": { "save": true } }
+   }
+   
 Standard response code are presented below:
 
 CODE    MEANING
