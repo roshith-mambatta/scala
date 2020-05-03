@@ -23,3 +23,10 @@ In addition to the response code, return a valid JSON response containing all of
 "message" : "Verbose, plain language description of the problem with hints about how to fix it."
 "more_info" : "http://developer.Application.opentext.com/someapi/errors/12345",
 "code" : 12345}
+
+Relative URL	v1/reports
+HTTP Verb	POST
+Description	Generate output from a report template. All desired output generation parameters should be coded within the request’s body.
+Response Code	200 (OK)
+Request Body Required?	Yes
+Returns Response Body?	Yes
