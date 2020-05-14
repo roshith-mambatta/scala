@@ -1,1 +1,4 @@
 https://itextpdf.com/en/resources/books/best-itext-7-questions-stackoverflow/what-difference-between-itext-jasperreports
+https://forums.opentext.com/forums/developer/discussion/298779/birt-report-runtime-version-4-4-2-uses-itext-2-1-7-version-and-itext-2-1-7-has-xxe-vulnerability
+https://stackoverflow.com/questions/59793241/openpdf-itext-2-1-7-xxe-vulnerability
+
