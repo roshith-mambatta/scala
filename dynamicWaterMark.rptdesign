@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201806261756</property>
+    <property name="units">in</property>
+    <method name="beforeFactory"><![CDATA[/*
+if (params["useWatermark"].value){ // For report parameter
+//if (vars["useWatermark"]){ // For report variable
+
+    reportContext.getDesignHandle().findMasterPage("MasterPageLandscape").setProperty("backgroundImage", "DRAFT-Watermark.JPG");
+    reportContext.getDesignHandle().findMasterPage("MasterPage").setProperty("backgroundImage", "DRAFT-Watermark.JPG");
+
+} else
+{
+    reportContext.getDesignHandle().findMasterPage("MasterPage").setProperty("backgroundImage", "");
+
+}
+*/]]></method>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="useWatermark" id="4">
+            <text-property name="promptText">useWatermark</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">boolean</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">true</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.datatools.enablement.oda.xml" name="Data Source" id="7">
+            <property name="FILELIST">C:\00_MyDrive\Birt\input\report.xml</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.datatools.enablement.oda.xml.dataSet" name="Data Set" id="8">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">useWatermark</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">useWatermark</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">useWatermark</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <method name="onFetch"><![CDATA[vars["useWatermark"]=row["useWatermark"]
+]]></method>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">useWatermark</property>
+                    <property name="nativeName">useWatermark</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[table0#-TNAME-#table0#:#[/documentInfo/useWatermark]#:#{useWatermark;STRING;}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>useWatermark</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>useWatermark</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>MAX_ROW</name>
+                    <value>-1</value>
+                </ex-property>
+                <ex-property>
+                    <name>XML_FILE</name>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="GridRowBackground" id="39">
+            <property name="backgroundAttachment">fixed</property>
+            <property name="backgroundImage">DRAFT-Watermark.JPG</property>
+            <property name="backgroundRepeat">no-repeat</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="MasterPage" id="2">
+            <property name="leftMargin">1in</property>
+            <property name="rightMargin">1in</property>
+            <property name="backgroundRepeat">no-repeat</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+        <simple-master-page name="MasterPageLandscape" id="34">
+            <property name="orientation">landscape</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <text id="5">
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA["Master page" > Property > Advanced > Background image 
+
+You need to declare a report parameter in the .rptdesign of the invoice. For example we name it "useWatermark", and we set the datatype to boolean and a default value to true.
+
+enter image description here
+
+Select the report root in the outline view of the designer -> script tab -> beforeFactory
+
+if (!params["useWatermark"].value){
+    reportContext.getDesignHandle().findMasterPage("Simple MasterPage").setProperty("backgroundImage", "");
+}
+This script removes the watermark if the parameter is set to false. By default, the master page is named "Simple Masterpage" but if you have renamed it or if there are multiple masterPages defined in the report you should adjust the script consequently.
+
+EDIT: if we need to extract the information from a dataset, then we can't make use of the masterPage, we have to use a grid instead.
+
+Create a grid with one cell, and drop all the content of your page into it
+Set your watermark as background-image of the grid
+Create a report variable "useWatermark" in the "Outline/variables" branch (see picture below), set default value to true/false as you like
+Select dataset invoiceHeader -> script tab -> onFetch, and affect the variable from a boolean dataset column, or from any expression returning true/false:
+
+vars["useWatermark"]=row["myBooleanDatasetColumn"];
+
+This dataset must be used somewhere in the report body, otherwise it won't be triggered and the variable won't be initialized
+
+Select the grid -> script tab -> onRender
+
+if (!vars["useWatermark"]){ this.getStyle().backgroundImage=""; }
+
+]]></text-property>
+        </text>
+        <grid id="13">
+            <property name="backgroundImage">DRAFT-Watermark.JPG</property>
+            <method name="onRender"><![CDATA[if (!vars["useWatermark"]){ this.getStyle().backgroundImage=""; }
+//if (!dataSetRow["useWatermark"]){ this.getStyle().backgroundImage=""; }
+]]></method>
+            <column id="14"/>
+            <row id="15">
+                <property name="masterPage">MasterPageLandscape</property>
+                <cell id="16">
+                    <text id="40">
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[Variable:]]></text-property>
+                    </text>
+                    <data id="37">
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">useWatermark</property>
+                                <text-property name="displayName">useWatermark</text-property>
+                                <expression name="expression" type="javascript">vars["useWatermark"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">useWatermark</property>
+                    </data>
+                    <text id="41">
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[Xml Value:]]></text-property>
+                    </text>
+                    <data id="43">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">useWatermark</property>
+                                <text-property name="displayName">useWatermark</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["useWatermark"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">useWatermark</property>
+                    </data>
+                    <text id="17">
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA["Master page" > Property > Advanced > Background image 
+
+You need to declare a report parameter in the .rptdesign of the invoice. For example we name it "useWatermark", and we set the datatype to boolean and a default value to true.
+
+enter image description here
+
+Select the report root in the outline view of the designer -> script tab -> beforeFactory
+
+if (!params["useWatermark"].value){
+    reportContext.getDesignHandle().findMasterPage("Simple MasterPage").setProperty("backgroundImage", "");
+}
+This script removes the watermark if the parameter is set to false. By default, the master page is named "Simple Masterpage" but if you have renamed it or if there are multiple masterPages defined in the report you should adjust the script consequently.
+
+EDIT: if we need to extract the information from a dataset, then we can't make use of the masterPage, we have to use a grid instead.
+
+Create a grid with one cell, and drop all the content of your page into it
+Set your watermark as background-image of the grid
+Create a report variable "useWatermark" in the "Outline/variables" branch (see picture below), set default value to true/false as you like
+Select dataset invoiceHeader -> script tab -> onFetch, and affect the variable from a boolean dataset column, or from any expression returning true/false:
+
+vars["useWatermark"]=row["myBooleanDatasetColumn"];
+
+This dataset must be used somewhere in the report body, otherwise it won't be triggered and the variable won't be initialized
+
+Select the grid -> script tab -> onRender
+
+if (!vars["useWatermark"]){ this.getStyle().backgroundImage=""; }
+
+]]></text-property>
+                    </text>
+                </cell>
+            </row>
+        </grid>
+    </body>
+    <property name="pageVariables">
+        <variable-element name="useWatermark">
+            <expression name="value" type="javascript">false</expression>
+            <property name="type">report</property>
+        </variable-element>
+    </property>
+</report>
