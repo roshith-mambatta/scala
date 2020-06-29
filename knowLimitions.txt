@@ -1,0 +1,1 @@
+1. In contrast to Cognos reports, BIRT reports are stored not in a data base, but in a separate folder on the hard disk. Consequently, you cannot export a full report package using Cognos user interface. The package would contain Cognos reports and links to the reports form the hard disk, which would not work on a different work station.
