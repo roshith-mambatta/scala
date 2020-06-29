@@ -1,5 +1,7 @@
 https://www.g2.com/products/birt/reviews#survey-response-1641774
 
+https://www.capterra.com/p/176257/Eclipse-BIRT/
+
 BIRT reporting integrates well with the IBM TRIRIGA application and you can export the reports, queries, and forms data sets easily from TRIRIGA.
 
 Birt report some times gets hanged or changes doesn't reflect. It's data and property binding requires too much time to fix in the report.
