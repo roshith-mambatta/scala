@@ -3,3 +3,6 @@ https://www.g2.com/products/birt/reviews#survey-response-1641774
 BIRT reporting integrates well with the IBM TRIRIGA application and you can export the reports, queries, and forms data sets easily from TRIRIGA.
 
 Birt report some times gets hanged or changes doesn't reflect. It's data and property binding requires too much time to fix in the report.
+
+The Report perspective lets you design and run reports using Business Intelligence and Reporting Tools (BIRT), a reporting tool integrated in CA WA Desktop Client. The reports are run using the BIRT Report engine and viewed using the BIRT Viewer. You can design custom reports using the BIRT Designer.
+CA WA Desktop Client includes the BIRT Sample database plug-ins to help you run BIRT sample reports and design custom reports.
