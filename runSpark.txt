@@ -1,0 +1,31 @@
+sudo apt update
+sudo apt -y upgrade
+sudo apt install default-jdk
+
+sudo apt install default-jdk scala git -y
+java -version; javac -version; scala -version; git --version
+
+wget https://downloads.apache.org/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz
+
+tar xvf spark-*
+
+sudo mv spark-2.4.5-bin-hadoop2.7 /opt/spark
+
+echo "export SPARK_HOME=/opt/spark" >> ~/.profile
+echo "export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin" >> ~/.profile
+echo "export PYSPARK_PYTHON=/usr/bin/python3" >> ~/.profile
+
+source ~/.profile
+
+./spark-submit --deploy-mode cluster \
+--master k8s://https://E9340D1C382D22F62B5EAFCF981678EF.gr7.eu-west-1.eks.amazonaws.com:443 \
+--conf spark.kubernetes.authenticate.driver.serviceAccountName=default \
+--conf spark.executor.instances=2 \
+--conf spark.app.name=my_pyspark_job \
+--conf spark.kubernetes.namespace=default \
+--conf spark.kubernetes.driver.container.image=spark2xdocker/pysparkfinal:v1 \
+--conf spark.kubernetes.executor.container.image=spark2xdocker/pysparkfinal:v1 local:///tmp/JsonFile2Df.py
+
+spark-submit --master k8s://https://E9340D1C382D22F62B5EAFCF981678EF.gr7.eu-west-1.eks.amazonaws.com:443 --deploy-mode cluster --name DataLoaderMain --class com.ex.DataLoaderMain --conf spark.executor.instances=5 --conf spark.kubernetes.container.image=debuggerrr/spark-docker:v0.1 local:///C:/Users/siddh/OneDrive/Desktop/WordCountSample/target/WordCountSample-0.0.1-SNAPSHOT.jar local:///C:/Users/siddh/OneDrive/Desktop/initialData.txt 
+
+spark-submit --master local --deploy-mode cluster --name DataLoaderMain --class com.ex.DataLoaderMain --conf spark.executor.instances=5 --conf spark.kubernetes.container.image=debuggerrr/spark-docker:v0.1 local:///C:/Users/siddh/OneDrive/Desktop/WordCountSample/target/WordCountSample-0.0.1-SNAPSHOT.jar local:///C:/Users/siddh/OneDrive/Desktop/initialData.txt 
