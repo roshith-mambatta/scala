@@ -28,4 +28,34 @@ source ~/.profile
 
 spark-submit --master k8s://https://E9340D1C382D22F62B5EAFCF981678EF.gr7.eu-west-1.eks.amazonaws.com:443 --deploy-mode cluster --name DataLoaderMain --class com.ex.DataLoaderMain --conf spark.executor.instances=5 --conf spark.kubernetes.container.image=debuggerrr/spark-docker:v0.1 local:///C:/Users/siddh/OneDrive/Desktop/WordCountSample/target/WordCountSample-0.0.1-SNAPSHOT.jar local:///C:/Users/siddh/OneDrive/Desktop/initialData.txt 
 
-spark-submit --master local --name DataLoaderMain --class com.ex.DataLoaderMain --conf spark.executor.instances=1  local:/tmp/jar/exercise-assembly-0.1.jar /tmp/input_job_configs/Run1_JobConfig.conf /tmp/input_job_configs/AppConfig.conf 
+You can disable hive metastore in spark shell by setting the value of spark.sql.catalogImplementation to in-memory which is hive by default.
+
+spark-submit --master local --name DataLoaderMain --class com.ex.DataLoaderMain --conf spark.executor.instances=1 --conf spark.sql.catalogImplementation=in-memory local:/tmp/jar/exercise-assembly-0.1.jar /tmp/input_job_configs/Run1_JobConfig.conf /tmp/input_job_configs/AppConfig.conf 
+
+**********************************************************************************************************
+
+    Check the hive-site.xml contents. Should be like as below for spark.
+    Add hive-site.xml to the driver-classpath so that spark can read hive configuration. Make sure —files must come before you .jar file
+    Add the datanucleus jars using --jars option when you submit
+    Check the contents of hive-site.xml
+
+     <configuration>
+        <property>
+          <name>hive.metastore.uris</name>
+          <value>thrift://sandbox.hortonworks.com:9083</value>
+        </property>
+      </configuration>
+
+    The Seq. of command
+
+    spark-submit \
+    --class <Your.class.name> \
+    --master yarn-cluster \
+    --num-executors 1 \
+    --driver-memory 1g \
+    --executor-memory 1g \
+    --executor-cores 1 \
+    --files /usr/hdp/current/spark-client/conf/hive-site.xml \
+    --jars /usr/hdp/current/spark-client/lib/datanucleus-api-jdo-3.2.6.jar,/usr/hdp/current/spark-client/lib/datanucleus-rdbms-3.2.9.jar,/usr/hdp/current/spark-client/lib/datanucleus-core-3.2.10.jar \
+    target/YOUR_JAR-1.0.0-SNAPSHOT.jar "show tables""select * from your_table"
+
