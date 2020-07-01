@@ -28,4 +28,4 @@ source ~/.profile
 
 spark-submit --master k8s://https://E9340D1C382D22F62B5EAFCF981678EF.gr7.eu-west-1.eks.amazonaws.com:443 --deploy-mode cluster --name DataLoaderMain --class com.ex.DataLoaderMain --conf spark.executor.instances=5 --conf spark.kubernetes.container.image=debuggerrr/spark-docker:v0.1 local:///C:/Users/siddh/OneDrive/Desktop/WordCountSample/target/WordCountSample-0.0.1-SNAPSHOT.jar local:///C:/Users/siddh/OneDrive/Desktop/initialData.txt 
 
-spark-submit --master local --name DataLoaderMain --class com.ex.DataLoaderMain --conf spark.executor.instances=1  local:/tmp/exercise-assembly-0.1.jar local:/tmp/AppConfig.conf local:/tmp/Run1_JobConfig.conf
+spark-submit --master local --name DataLoaderMain --class com.ex.DataLoaderMain --conf spark.executor.instances=1  local:/tmp/jar/exercise-assembly-0.1.jar /tmp/input_job_configs/Run1_JobConfig.conf /tmp/input_job_configs/AppConfig.conf 
