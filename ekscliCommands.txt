@@ -1,3 +1,64 @@
+
+sudo apt install python3-pip
+pip3 install --upgrade --user awscli
+root@roshith:/opt/spark/bin# aws --version
+aws-cli/1.18.93 Python/3.8.2 Linux/5.4.0-40-generic botocore/1.17.16
+
+eksctl create cluster \
+--name demoEksCluster \
+--version 1.16 \
+--region eu-west-1 \
+--nodegroup-name demoEksCluster-workers \
+--node-type t3.medium \
+--nodes 2 \
+--nodes-min 1 \
+--nodes-max 4 \
+--managed
+
+
+root@roshith:/home/roshith# eksctl create cluster \
+> --name demoEksCluster \
+> --version 1.16 \
+> --region eu-west-1 \
+> --nodegroup-name demoEksCluster-workers \
+> --node-type t3.medium \
+> --nodes 2 \
+> --nodes-min 1 \
+> --nodes-max 4 \
+> --managed
+[ℹ]  eksctl version 0.23.0
+[ℹ]  using region eu-west-1
+[ℹ]  setting availability zones to [eu-west-1b eu-west-1a eu-west-1c]
+[ℹ]  subnets for eu-west-1b - public:192.168.0.0/19 private:192.168.96.0/19
+[ℹ]  subnets for eu-west-1a - public:192.168.32.0/19 private:192.168.128.0/19
+[ℹ]  subnets for eu-west-1c - public:192.168.64.0/19 private:192.168.160.0/19
+[ℹ]  using Kubernetes version 1.16
+[ℹ]  creating EKS cluster "demoEksCluster" in "eu-west-1" region with managed nodes
+[ℹ]  will create 2 separate CloudFormation stacks for cluster itself and the initial managed nodegroup
+[ℹ]  if you encounter any issues, check CloudFormation console or try 'eksctl utils describe-stacks --region=eu-west-1 --cluster=demoEksCluster'
+[ℹ]  CloudWatch logging will not be enabled for cluster "demoEksCluster" in "eu-west-1"
+[ℹ]  you can enable it with 'eksctl utils update-cluster-logging --region=eu-west-1 --cluster=demoEksCluster'
+[ℹ]  Kubernetes API endpoint access will use default of {publicAccess=true, privateAccess=false} for cluster "demoEksCluster" in "eu-west-1"
+[ℹ]  2 sequential tasks: { create cluster control plane "demoEksCluster", 2 sequential sub-tasks: { no tasks, create managed nodegroup "demoEksCluster-workers" } }
+[ℹ]  building cluster stack "eksctl-demoEksCluster-cluster"
+[ℹ]  deploying stack "eksctl-demoEksCluster-cluster"
+[ℹ]  building managed nodegroup stack "eksctl-demoEksCluster-nodegroup-demoEksCluster-workers"
+[ℹ]  deploying stack "eksctl-demoEksCluster-nodegroup-demoEksCluster-workers"
+[ℹ]  waiting for the control plane availability...
+[✔]  saved kubeconfig as "/root/.kube/config"
+[ℹ]  no tasks
+[✔]  all EKS cluster resources for "demoEksCluster" have been created
+[ℹ]  nodegroup "demoEksCluster-workers" has 2 node(s)
+[ℹ]  node "ip-192-168-1-0.eu-west-1.compute.internal" is ready
+[ℹ]  node "ip-192-168-59-239.eu-west-1.compute.internal" is ready
+[ℹ]  waiting for at least 1 node(s) to become ready in "demoEksCluster-workers"
+[ℹ]  nodegroup "demoEksCluster-workers" has 2 node(s)
+[ℹ]  node "ip-192-168-1-0.eu-west-1.compute.internal" is ready
+[ℹ]  node "ip-192-168-59-239.eu-west-1.compute.internal" is ready
+[ℹ]  kubectl command should work with "/root/.kube/config", try 'kubectl get nodes'
+[✔]  EKS cluster "demoEksCluster" in "eu-west-1" region is ready
+
+
 python3 --version
 sudo apt-get update
 #sudo apt upgrade -y
