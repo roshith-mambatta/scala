@@ -1,3 +1,11 @@
+echo "* Package File ( 1):      /opt/ccmadmin/CCM_services/EDITIQ/packages/EDITIQ_SY.pub -- Application"| grep -Po 'packages/\K[^.pub]*'
+
+echo "Program start & end:           07/22/2020 11:45:14 - 11:45:14 "| grep -Po 'Program start & end:\K[^-]*' | sed 's/^ *//g'
+
+
+echo "Number of pages: 96 (12 blank)"| grep -Po 'Number of pages:\K[^blank)]*'|  sed -e 's/ //g'| sed -e 's/(/;/g'
+
+
 #!/bin/bash
 
 CCM_HOME=/home/roshith/Desktop
