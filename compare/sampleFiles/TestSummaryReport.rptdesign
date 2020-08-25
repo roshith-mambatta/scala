@@ -1,0 +1,1699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201806261756</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="CSV Data Source" id="154">
+            <property name="HOME">C:\00_MyDrive\Birt\input</property>
+            <property name="DELIMTYPE">COMMA</property>
+            <property name="CHARSET">UTF-8</property>
+            <property name="INCLCOLUMNNAME">YES</property>
+            <property name="INCLTYPELINE">NO</property>
+            <property name="TRAILNULLCOLS">NO</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="testSumaryReport" id="155">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">CLIENT</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">CLIENT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TC</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">TC</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TC_DESC</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">TC_DESC</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TC_TGT_EXEC_STATUS</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">TC_TGT_EXEC_STATUS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TC_REF_EXEC_STATUS</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">TC_REF_EXEC_STATUS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TC_OUTPUT_FILE_NAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">TC_OUTPUT_FILE_NAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TC_COMPARE_STATUS</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">TC_COMPARE_STATUS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TC_ERR_DESC</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">TC_ERR_DESC</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">CLIENT</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">TC</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">TC_DESC</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">TC_TGT_EXEC_STATUS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">TC_REF_EXEC_STATUS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">TC_OUTPUT_FILE_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">TC_COMPARE_STATUS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">TC_ERR_DESC</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">CSV Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">CLIENT</property>
+                    <property name="nativeName">CLIENT</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">TC</property>
+                    <property name="nativeName">TC</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">TC_DESC</property>
+                    <property name="nativeName">TC_DESC</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">TC_TGT_EXEC_STATUS</property>
+                    <property name="nativeName">TC_TGT_EXEC_STATUS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">TC_REF_EXEC_STATUS</property>
+                    <property name="nativeName">TC_REF_EXEC_STATUS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">TC_OUTPUT_FILE_NAME</property>
+                    <property name="nativeName">TC_OUTPUT_FILE_NAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">TC_COMPARE_STATUS</property>
+                    <property name="nativeName">TC_COMPARE_STATUS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">TC_ERR_DESC</property>
+                    <property name="nativeName">TC_ERR_DESC</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "CLIENT", "TC", "TC_DESC", "TC_TGT_EXEC_STATUS", "TC_REF_EXEC_STATUS", "TC_OUTPUT_FILE_NAME", "TC_COMPARE_STATUS", "TC_ERR_DESC" from "testSumaryReport.csv" : {"CLIENT","CLIENT",STRING;"TC","TC",STRING;"TC_DESC","TC_DESC",STRING;"TC_TGT_EXEC_STATUS","TC_TGT_EXEC_STATUS",STRING;"TC_REF_EXEC_STATUS","TC_REF_EXEC_STATUS",STRING;"TC_OUTPUT_FILE_NAME","TC_OUTPUT_FILE_NAME",STRING;"TC_COMPARE_STATUS","TC_COMPARE_STATUS",STRING;"TC_ERR_DESC","TC_ERR_DESC",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CLIENT</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CLIENT</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TC</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TC</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TC_DESC</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TC_DESC</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TC_TGT_EXEC_STATUS</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TC_TGT_EXEC_STATUS</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TC_REF_EXEC_STATUS</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TC_REF_EXEC_STATUS</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TC_OUTPUT_FILE_NAME</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TC_OUTPUT_FILE_NAME</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TC_COMPARE_STATUS</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TC_COMPARE_STATUS</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TC_ERR_DESC</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TC_ERR_DESC</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="topMargin">0.5in</property>
+            <property name="leftMargin">1in</property>
+            <property name="rightMargin">1in</property>
+            <property name="headerHeight">0.5in</property>
+            <property name="footerHeight">0.25in</property>
+            <page-header>
+                <text id="409">
+                    <property name="fontFamily">"Century Gothic"</property>
+                    <property name="fontSize">16pt</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="borderBottomColor">#C0C0C0</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">medium</property>
+                    <property name="paddingBottom">3pt</property>
+                    <property name="contentType">auto</property>
+                    <text-property name="content"><![CDATA[Test Summary Report]]></text-property>
+                </text>
+            </page-header>
+            <page-footer>
+                <grid id="366">
+                    <column id="367"/>
+                    <column id="368"/>
+                    <column id="369"/>
+                    <row id="370">
+                        <property name="borderTopColor">#808080</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <cell id="371"/>
+                        <cell id="372">
+                            <text id="408">
+                                <property name="fontFamily">"Century Gothic"</property>
+                                <property name="fontSize">6pt</property>
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[CCM]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="373">
+                            <property name="textAlign">right</property>
+                            <grid id="397">
+                                <property name="width">40pt</property>
+                                <column id="398"/>
+                                <column id="399"/>
+                                <column id="400"/>
+                                <row id="401">
+                                    <property name="fontFamily">"Century Gothic"</property>
+                                    <property name="fontSize">6pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <cell id="402">
+                                        <auto-text id="403">
+                                            <property name="type">page-number</property>
+                                        </auto-text>
+                                    </cell>
+                                    <cell id="404">
+                                        <text id="405">
+                                            <property name="contentType">plain</property>
+                                            <text-property name="content"><![CDATA[/]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="406">
+                                        <auto-text id="407">
+                                            <property name="type">total-page</property>
+                                        </auto-text>
+                                    </cell>
+                                </row>
+                            </grid>
+                        </cell>
+                    </row>
+                </grid>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="22">
+            <column id="23"/>
+            <row id="24">
+                <cell id="25">
+                    <property name="paddingRight">10pt</property>
+                    <grid id="426">
+                        <column id="427"/>
+                        <column id="428"/>
+                        <row id="429">
+                            <cell id="430">
+                                <text id="438">
+                                    <property name="contentType">auto</property>
+                                    <text-property name="content"><![CDATA[TARGET]]></text-property>
+                                </text>
+                            </cell>
+                            <cell id="431"/>
+                        </row>
+                        <row id="432">
+                            <cell id="433">
+                                <text id="439">
+                                    <property name="contentType">auto</property>
+                                    <text-property name="content"><![CDATA[TARGET]]></text-property>
+                                </text>
+                            </cell>
+                            <cell id="434"/>
+                        </row>
+                        <row id="435">
+                            <cell id="436">
+                                <text id="440">
+                                    <property name="contentType">auto</property>
+                                    <text-property name="content"><![CDATA[TARGET]]></text-property>
+                                </text>
+                            </cell>
+                            <cell id="437"/>
+                        </row>
+                    </grid>
+                </cell>
+            </row>
+            <row id="26">
+                <cell id="27">
+                    <table id="158">
+                        <property name="dataSet">testSumaryReport</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">TC</property>
+                                <text-property name="displayName">TC</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["TC"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Total_TC</property>
+                                <property name="dataType">integer</property>
+                                <property name="aggregateFunction">COUNT</property>
+                                <list-property name="arguments">
+                                    <structure>
+                                        <property name="name">Expression</property>
+                                        <expression name="value" type="javascript">row["TC"]</expression>
+                                    </structure>
+                                </list-property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">TC_COMPARE_STATUS</property>
+                                <text-property name="displayName">TC_COMPARE_STATUS</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["TC_COMPARE_STATUS"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Total_TC_PASS</property>
+                                <property name="dataType">float</property>
+                                <property name="aggregateFunction">SUM</property>
+                                <list-property name="arguments">
+                                    <structure>
+                                        <property name="name">Expression</property>
+                                        <expression name="value" type="javascript">if(dataSetRow["TC_COMPARE_STATUS"]=="PASS")&#13;
+{&#13;
+1&#13;
+}&#13;
+else&#13;
+{&#13;
+0&#13;
+}</expression>
+                                    </structure>
+                                </list-property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Total_TC_FAIL</property>
+                                <property name="dataType">float</property>
+                                <property name="aggregateFunction">SUM</property>
+                                <list-property name="arguments">
+                                    <structure>
+                                        <property name="name">Expression</property>
+                                        <expression name="value" type="javascript">if(dataSetRow["TC_COMPARE_STATUS"]=="FAIL")&#13;
+{&#13;
+1&#13;
+}&#13;
+else&#13;
+{&#13;
+0&#13;
+}</expression>
+                                    </structure>
+                                </list-property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Aggregation</property>
+                                <property name="dataType">float</property>
+                                <property name="aggregateFunction">SUM</property>
+                                <list-property name="arguments">
+                                    <structure>
+                                        <property name="name">Expression</property>
+                                        <expression name="value" type="javascript">(row["Total_TC_PASS"]/row["Total_TC"])*100</expression>
+                                    </structure>
+                                </list-property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Percentage</property>
+                                <expression name="expression" type="javascript">BirtMath.round((row["Total_TC_PASS"]/row["Total_TC"])*100,2)</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <column id="167"/>
+                        <column id="362"/>
+                        <header>
+                            <row id="159">
+                                <cell id="160">
+                                    <property name="paddingTop">10pt</property>
+                                    <property name="textAlign">left</property>
+                                    <grid id="4">
+                                        <property name="width">10cm</property>
+                                        <column id="5">
+                                            <property name="width">2cm</property>
+                                        </column>
+                                        <column id="6">
+                                            <property name="width">3cm</property>
+                                        </column>
+                                        <column id="7">
+                                            <property name="width">3cm</property>
+                                        </column>
+                                        <row id="8">
+                                            <cell id="9">
+                                                <property name="borderRightStyle">solid</property>
+                                                <property name="borderRightWidth">thin</property>
+                                                <data id="170">
+                                                    <property name="backgroundAttachment">scroll</property>
+                                                    <property name="backgroundPositionX">0%</property>
+                                                    <property name="backgroundPositionY">0%</property>
+                                                    <property name="backgroundRepeat">repeat</property>
+                                                    <property name="fontFamily">"Century Gothic"</property>
+                                                    <property name="fontSize">16pt</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <property name="fontStyle">normal</property>
+                                                    <property name="fontVariant">normal</property>
+                                                    <property name="color">black</property>
+                                                    <property name="textLineThrough">none</property>
+                                                    <property name="textOverline">none</property>
+                                                    <property name="textUnderline">none</property>
+                                                    <property name="borderBottomColor">black</property>
+                                                    <property name="borderBottomStyle">none</property>
+                                                    <property name="borderBottomWidth">medium</property>
+                                                    <property name="borderLeftColor">black</property>
+                                                    <property name="borderLeftStyle">none</property>
+                                                    <property name="borderLeftWidth">medium</property>
+                                                    <property name="borderRightColor">black</property>
+                                                    <property name="borderRightStyle">none</property>
+                                                    <property name="borderRightWidth">medium</property>
+                                                    <property name="borderTopColor">black</property>
+                                                    <property name="borderTopStyle">none</property>
+                                                    <property name="borderTopWidth">medium</property>
+                                                    <property name="marginTop">0pt</property>
+                                                    <property name="marginLeft">0pt</property>
+                                                    <property name="marginBottom">0pt</property>
+                                                    <property name="marginRight">0pt</property>
+                                                    <property name="paddingTop">1pt</property>
+                                                    <property name="paddingLeft">1pt</property>
+                                                    <property name="paddingBottom">1pt</property>
+                                                    <property name="paddingRight">1pt</property>
+                                                    <property name="letterSpacing">normal</property>
+                                                    <property name="lineHeight">normal</property>
+                                                    <property name="orphans">2</property>
+                                                    <property name="textTransform">none</property>
+                                                    <property name="whiteSpace">normal</property>
+                                                    <property name="widows">2</property>
+                                                    <property name="wordSpacing">normal</property>
+                                                    <property name="display">block</property>
+                                                    <property name="pageBreakAfter">auto</property>
+                                                    <property name="pageBreakBefore">auto</property>
+                                                    <property name="pageBreakInside">auto</property>
+                                                    <property name="showIfBlank">false</property>
+                                                    <property name="canShrink">false</property>
+                                                    <property name="overflow">hidden</property>
+                                                    <property name="resultSetColumn">Total_TC</property>
+                                                </data>
+                                            </cell>
+                                            <cell id="10">
+                                                <property name="paddingLeft">30pt</property>
+                                                <data id="173">
+                                                    <property name="backgroundAttachment">scroll</property>
+                                                    <property name="backgroundPositionX">0%</property>
+                                                    <property name="backgroundPositionY">0%</property>
+                                                    <property name="backgroundRepeat">repeat</property>
+                                                    <property name="fontFamily">"Century Gothic"</property>
+                                                    <property name="fontSize">16pt</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <property name="fontStyle">normal</property>
+                                                    <property name="fontVariant">normal</property>
+                                                    <property name="color">#008000</property>
+                                                    <property name="textLineThrough">none</property>
+                                                    <property name="textOverline">none</property>
+                                                    <property name="textUnderline">none</property>
+                                                    <property name="borderBottomColor">black</property>
+                                                    <property name="borderBottomStyle">none</property>
+                                                    <property name="borderBottomWidth">medium</property>
+                                                    <property name="borderLeftColor">black</property>
+                                                    <property name="borderLeftStyle">none</property>
+                                                    <property name="borderLeftWidth">medium</property>
+                                                    <property name="borderRightColor">black</property>
+                                                    <property name="borderRightStyle">none</property>
+                                                    <property name="borderRightWidth">medium</property>
+                                                    <property name="borderTopColor">black</property>
+                                                    <property name="borderTopStyle">none</property>
+                                                    <property name="borderTopWidth">medium</property>
+                                                    <property name="marginTop">0pt</property>
+                                                    <property name="marginLeft">0pt</property>
+                                                    <property name="marginBottom">0pt</property>
+                                                    <property name="marginRight">0pt</property>
+                                                    <property name="paddingTop">1pt</property>
+                                                    <property name="paddingLeft">1pt</property>
+                                                    <property name="paddingBottom">1pt</property>
+                                                    <property name="paddingRight">1pt</property>
+                                                    <property name="letterSpacing">normal</property>
+                                                    <property name="lineHeight">normal</property>
+                                                    <property name="orphans">2</property>
+                                                    <property name="textTransform">none</property>
+                                                    <property name="whiteSpace">normal</property>
+                                                    <property name="widows">2</property>
+                                                    <property name="wordSpacing">normal</property>
+                                                    <property name="display">block</property>
+                                                    <property name="pageBreakAfter">auto</property>
+                                                    <property name="pageBreakBefore">auto</property>
+                                                    <property name="pageBreakInside">auto</property>
+                                                    <property name="showIfBlank">false</property>
+                                                    <property name="canShrink">false</property>
+                                                    <property name="overflow">hidden</property>
+                                                    <property name="resultSetColumn">Total_TC_PASS</property>
+                                                </data>
+                                            </cell>
+                                            <cell id="11">
+                                                <property name="paddingLeft">1pt</property>
+                                                <data id="174">
+                                                    <property name="backgroundAttachment">scroll</property>
+                                                    <property name="backgroundPositionX">0%</property>
+                                                    <property name="backgroundPositionY">0%</property>
+                                                    <property name="backgroundRepeat">repeat</property>
+                                                    <property name="fontFamily">"Century Gothic"</property>
+                                                    <property name="fontSize">16pt</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <property name="fontStyle">normal</property>
+                                                    <property name="fontVariant">normal</property>
+                                                    <property name="color">#FF0000</property>
+                                                    <property name="textLineThrough">none</property>
+                                                    <property name="textOverline">none</property>
+                                                    <property name="textUnderline">none</property>
+                                                    <property name="borderBottomColor">black</property>
+                                                    <property name="borderBottomStyle">none</property>
+                                                    <property name="borderBottomWidth">medium</property>
+                                                    <property name="borderLeftColor">black</property>
+                                                    <property name="borderLeftStyle">none</property>
+                                                    <property name="borderLeftWidth">medium</property>
+                                                    <property name="borderRightColor">black</property>
+                                                    <property name="borderRightStyle">none</property>
+                                                    <property name="borderRightWidth">medium</property>
+                                                    <property name="borderTopColor">black</property>
+                                                    <property name="borderTopStyle">none</property>
+                                                    <property name="borderTopWidth">medium</property>
+                                                    <property name="marginTop">0pt</property>
+                                                    <property name="marginLeft">0pt</property>
+                                                    <property name="marginBottom">0pt</property>
+                                                    <property name="marginRight">0pt</property>
+                                                    <property name="paddingTop">1pt</property>
+                                                    <property name="paddingLeft">1pt</property>
+                                                    <property name="paddingBottom">1pt</property>
+                                                    <property name="paddingRight">1pt</property>
+                                                    <property name="letterSpacing">normal</property>
+                                                    <property name="lineHeight">normal</property>
+                                                    <property name="orphans">2</property>
+                                                    <property name="textTransform">none</property>
+                                                    <property name="whiteSpace">normal</property>
+                                                    <property name="widows">2</property>
+                                                    <property name="wordSpacing">normal</property>
+                                                    <property name="display">block</property>
+                                                    <property name="pageBreakAfter">auto</property>
+                                                    <property name="pageBreakBefore">auto</property>
+                                                    <property name="pageBreakInside">auto</property>
+                                                    <property name="showIfBlank">false</property>
+                                                    <property name="canShrink">false</property>
+                                                    <property name="overflow">hidden</property>
+                                                    <property name="resultSetColumn">Total_TC_FAIL</property>
+                                                </data>
+                                            </cell>
+                                        </row>
+                                        <row id="12">
+                                            <cell id="13">
+                                                <property name="borderRightStyle">solid</property>
+                                                <property name="borderRightWidth">thin</property>
+                                                <property name="paddingTop">2.5pt</property>
+                                                <text id="16">
+                                                    <property name="fontFamily">"Century Gothic"</property>
+                                                    <property name="fontSize">7pt</property>
+                                                    <property name="color">#808080</property>
+                                                    <property name="contentType">auto</property>
+                                                    <text-property name="content"><![CDATA[Total tests]]></text-property>
+                                                </text>
+                                            </cell>
+                                            <cell id="14">
+                                                <property name="paddingLeft">1pt</property>
+                                                <grid id="32">
+                                                    <column id="33">
+                                                        <property name="width">1.5cm</property>
+                                                    </column>
+                                                    <column id="34"/>
+                                                    <row id="35">
+                                                        <cell id="36">
+                                                            <property name="paddingTop">3pt</property>
+                                                            <property name="paddingLeft">30pt</property>
+                                                            <property name="paddingRight">0pt</property>
+                                                            <text id="304">
+                                                                <property name="backgroundAttachment">scroll</property>
+                                                                <property name="backgroundColor">#008000</property>
+                                                                <property name="backgroundPositionX">0%</property>
+                                                                <property name="backgroundPositionY">0%</property>
+                                                                <property name="backgroundRepeat">repeat</property>
+                                                                <property name="fontFamily">"Century Gothic"</property>
+                                                                <property name="fontSize">3pt</property>
+                                                                <property name="fontWeight">normal</property>
+                                                                <property name="fontStyle">normal</property>
+                                                                <property name="fontVariant">normal</property>
+                                                                <property name="color">#808080</property>
+                                                                <property name="textLineThrough">none</property>
+                                                                <property name="textOverline">none</property>
+                                                                <property name="textUnderline">none</property>
+                                                                <property name="borderBottomColor">black</property>
+                                                                <property name="borderBottomStyle">none</property>
+                                                                <property name="borderBottomWidth">medium</property>
+                                                                <property name="borderLeftColor">black</property>
+                                                                <property name="borderLeftStyle">none</property>
+                                                                <property name="borderLeftWidth">medium</property>
+                                                                <property name="borderRightColor">black</property>
+                                                                <property name="borderRightStyle">none</property>
+                                                                <property name="borderRightWidth">medium</property>
+                                                                <property name="borderTopColor">black</property>
+                                                                <property name="borderTopStyle">none</property>
+                                                                <property name="borderTopWidth">medium</property>
+                                                                <property name="marginTop">0pt</property>
+                                                                <property name="marginLeft">0pt</property>
+                                                                <property name="marginBottom">0pt</property>
+                                                                <property name="marginRight">0pt</property>
+                                                                <property name="paddingTop">1pt</property>
+                                                                <property name="paddingLeft">1pt</property>
+                                                                <property name="paddingBottom">1pt</property>
+                                                                <property name="paddingRight">1pt</property>
+                                                                <property name="textAlign">left</property>
+                                                                <property name="textIndent">0em</property>
+                                                                <property name="letterSpacing">normal</property>
+                                                                <property name="lineHeight">normal</property>
+                                                                <property name="orphans">2</property>
+                                                                <property name="textTransform">none</property>
+                                                                <property name="whiteSpace">normal</property>
+                                                                <property name="widows">2</property>
+                                                                <property name="wordSpacing">normal</property>
+                                                                <property name="display">block</property>
+                                                                <property name="pageBreakAfter">auto</property>
+                                                                <property name="pageBreakBefore">auto</property>
+                                                                <property name="pageBreakInside">auto</property>
+                                                                <property name="showIfBlank">false</property>
+                                                                <property name="canShrink">false</property>
+                                                                <property name="overflow">hidden</property>
+                                                                <property name="contentType">auto</property>
+                                                                <text-property name="content"><![CDATA[ ]]></text-property>
+                                                            </text>
+                                                        </cell>
+                                                        <cell id="37">
+                                                            <property name="paddingTop">1pt</property>
+                                                            <property name="textAlign">left</property>
+                                                            <text id="38">
+                                                                <property name="fontFamily">"Century Gothic"</property>
+                                                                <property name="fontSize">7pt</property>
+                                                                <property name="color">#808080</property>
+                                                                <property name="contentType">auto</property>
+                                                                <text-property name="content"><![CDATA[Passed]]></text-property>
+                                                            </text>
+                                                        </cell>
+                                                    </row>
+                                                </grid>
+                                            </cell>
+                                            <cell id="15">
+                                                <grid id="42">
+                                                    <property name="width">3cm</property>
+                                                    <column id="43">
+                                                        <property name="width">0.5cm</property>
+                                                    </column>
+                                                    <column id="44"/>
+                                                    <row id="45">
+                                                        <cell id="46">
+                                                            <property name="paddingTop">3pt</property>
+                                                            <property name="paddingLeft">1pt</property>
+                                                            <text id="305">
+                                                                <property name="backgroundAttachment">scroll</property>
+                                                                <property name="backgroundColor">#FF0000</property>
+                                                                <property name="backgroundPositionX">0%</property>
+                                                                <property name="backgroundPositionY">0%</property>
+                                                                <property name="backgroundRepeat">repeat</property>
+                                                                <property name="fontFamily">"Century Gothic"</property>
+                                                                <property name="fontSize">3pt</property>
+                                                                <property name="fontWeight">normal</property>
+                                                                <property name="fontStyle">normal</property>
+                                                                <property name="fontVariant">normal</property>
+                                                                <property name="color">#808080</property>
+                                                                <property name="textLineThrough">none</property>
+                                                                <property name="textOverline">none</property>
+                                                                <property name="textUnderline">none</property>
+                                                                <property name="borderBottomColor">black</property>
+                                                                <property name="borderBottomStyle">none</property>
+                                                                <property name="borderBottomWidth">medium</property>
+                                                                <property name="borderLeftColor">black</property>
+                                                                <property name="borderLeftStyle">none</property>
+                                                                <property name="borderLeftWidth">medium</property>
+                                                                <property name="borderRightColor">black</property>
+                                                                <property name="borderRightStyle">none</property>
+                                                                <property name="borderRightWidth">medium</property>
+                                                                <property name="borderTopColor">black</property>
+                                                                <property name="borderTopStyle">none</property>
+                                                                <property name="borderTopWidth">medium</property>
+                                                                <property name="marginTop">0pt</property>
+                                                                <property name="marginLeft">0pt</property>
+                                                                <property name="marginBottom">0pt</property>
+                                                                <property name="marginRight">0pt</property>
+                                                                <property name="paddingTop">1pt</property>
+                                                                <property name="paddingLeft">1pt</property>
+                                                                <property name="paddingBottom">1pt</property>
+                                                                <property name="paddingRight">1pt</property>
+                                                                <property name="textAlign">left</property>
+                                                                <property name="textIndent">0em</property>
+                                                                <property name="letterSpacing">normal</property>
+                                                                <property name="lineHeight">normal</property>
+                                                                <property name="orphans">2</property>
+                                                                <property name="textTransform">none</property>
+                                                                <property name="whiteSpace">normal</property>
+                                                                <property name="widows">2</property>
+                                                                <property name="wordSpacing">normal</property>
+                                                                <property name="display">block</property>
+                                                                <property name="pageBreakAfter">auto</property>
+                                                                <property name="pageBreakBefore">auto</property>
+                                                                <property name="pageBreakInside">auto</property>
+                                                                <property name="showIfBlank">false</property>
+                                                                <property name="canShrink">false</property>
+                                                                <property name="overflow">hidden</property>
+                                                                <property name="contentType">auto</property>
+                                                                <text-property name="content"><![CDATA[ ]]></text-property>
+                                                            </text>
+                                                        </cell>
+                                                        <cell id="48">
+                                                            <property name="paddingTop">1pt</property>
+                                                            <text id="49">
+                                                                <property name="fontFamily">"Century Gothic"</property>
+                                                                <property name="fontSize">7pt</property>
+                                                                <property name="color">#808080</property>
+                                                                <property name="contentType">auto</property>
+                                                                <text-property name="content"><![CDATA[Failed]]></text-property>
+                                                            </text>
+                                                        </cell>
+                                                    </row>
+                                                </grid>
+                                            </cell>
+                                        </row>
+                                    </grid>
+                                </cell>
+                                <cell id="361">
+                                    <property name="textAlign">left</property>
+                                    <data id="364">
+                                        <property name="backgroundAttachment">scroll</property>
+                                        <property name="backgroundPositionX">0%</property>
+                                        <property name="backgroundPositionY">0%</property>
+                                        <property name="backgroundRepeat">repeat</property>
+                                        <property name="fontFamily">"Century Gothic"</property>
+                                        <property name="fontSize">40pt</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="fontStyle">normal</property>
+                                        <property name="fontVariant">normal</property>
+                                        <property name="color">#808080</property>
+                                        <property name="textLineThrough">none</property>
+                                        <property name="textOverline">none</property>
+                                        <property name="textUnderline">none</property>
+                                        <property name="borderBottomColor">black</property>
+                                        <property name="borderBottomStyle">none</property>
+                                        <property name="borderBottomWidth">medium</property>
+                                        <property name="borderLeftColor">black</property>
+                                        <property name="borderLeftStyle">none</property>
+                                        <property name="borderLeftWidth">medium</property>
+                                        <property name="borderRightColor">black</property>
+                                        <property name="borderRightStyle">none</property>
+                                        <property name="borderRightWidth">medium</property>
+                                        <property name="borderTopColor">black</property>
+                                        <property name="borderTopStyle">none</property>
+                                        <property name="borderTopWidth">medium</property>
+                                        <property name="marginTop">0pt</property>
+                                        <property name="marginLeft">0pt</property>
+                                        <property name="marginBottom">0pt</property>
+                                        <property name="marginRight">0pt</property>
+                                        <property name="paddingLeft">1pt</property>
+                                        <property name="paddingBottom">1pt</property>
+                                        <property name="paddingRight">1pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="letterSpacing">normal</property>
+                                        <property name="lineHeight">normal</property>
+                                        <property name="orphans">2</property>
+                                        <property name="textTransform">none</property>
+                                        <property name="whiteSpace">normal</property>
+                                        <property name="widows">2</property>
+                                        <property name="wordSpacing">normal</property>
+                                        <property name="display">block</property>
+                                        <property name="pageBreakAfter">auto</property>
+                                        <property name="pageBreakBefore">auto</property>
+                                        <property name="pageBreakInside">auto</property>
+                                        <property name="showIfBlank">false</property>
+                                        <property name="canShrink">false</property>
+                                        <property name="overflow">hidden</property>
+                                        <property name="resultSetColumn">Percentage</property>
+                                    </data>
+                                    <text id="365">
+                                        <property name="fontFamily">"Century Gothic"</property>
+                                        <property name="color">#808080</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[% test cases PASSED]]></text-property>
+                                    </text>
+                                </cell>
+                            </row>
+                        </header>
+                    </table>
+                </cell>
+            </row>
+            <row id="28">
+                <cell id="29">
+                    <property name="paddingTop">50pt</property>
+                    <property name="paddingRight">1pt</property>
+                </cell>
+            </row>
+            <row id="55">
+                <cell id="56"/>
+            </row>
+            <row id="51">
+                <cell id="52">
+                    <table id="258">
+                        <property name="dataSet">testSumaryReport</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">CLIENT</property>
+                                <text-property name="displayName">CLIENT</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CLIENT"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">TC</property>
+                                <text-property name="displayName">TC</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["TC"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">TC_COMPARE_STATUS</property>
+                                <text-property name="displayName">TC_COMPARE_STATUS</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["TC_COMPARE_STATUS"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Total</property>
+                                <property name="dataType">integer</property>
+                                <simple-property-list name="aggregateOn">
+                                    <value>ClientGroup</value>
+                                </simple-property-list>
+                                <property name="aggregateFunction">COUNT</property>
+                                <list-property name="arguments">
+                                    <structure>
+                                        <property name="name">Expression</property>
+                                        <expression name="value" type="javascript">dataSetRow["TC"]</expression>
+                                    </structure>
+                                </list-property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">TotalPass</property>
+                                <property name="dataType">float</property>
+                                <simple-property-list name="aggregateOn">
+                                    <value>ClientGroup</value>
+                                </simple-property-list>
+                                <property name="aggregateFunction">SUM</property>
+                                <list-property name="arguments">
+                                    <structure>
+                                        <property name="name">Expression</property>
+                                        <expression name="value" type="javascript">if(dataSetRow["TC_COMPARE_STATUS"]=="PASS")&#13;
+{&#13;
+1&#13;
+}&#13;
+else&#13;
+{&#13;
+0&#13;
+}</expression>
+                                    </structure>
+                                </list-property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">TotalFail</property>
+                                <property name="dataType">float</property>
+                                <simple-property-list name="aggregateOn">
+                                    <value>ClientGroup</value>
+                                </simple-property-list>
+                                <property name="aggregateFunction">SUM</property>
+                                <list-property name="arguments">
+                                    <structure>
+                                        <property name="name">Expression</property>
+                                        <expression name="value" type="javascript">if(dataSetRow["TC_COMPARE_STATUS"]=="FAIL")&#13;
+{&#13;
+1&#13;
+}&#13;
+else&#13;
+{&#13;
+0&#13;
+}</expression>
+                                    </structure>
+                                </list-property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <column id="277">
+                            <property name="fontSize">10pt</property>
+                            <property name="width">2.5cm</property>
+                        </column>
+                        <column id="278"/>
+                        <header>
+                            <row id="259">
+                                <cell id="260"/>
+                                <cell id="262"/>
+                            </row>
+                        </header>
+                        <group id="280">
+                            <property name="groupName">ClientGroup</property>
+                            <expression name="keyExpr" type="javascript">row["CLIENT"]</expression>
+                            <structure name="toc">
+                                <expression name="expressionValue" type="javascript">row["CLIENT"]</expression>
+                            </structure>
+                            <property name="hideDetail">false</property>
+                            <header>
+                                <row id="281">
+                                    <cell id="282">
+                                        <data id="289">
+                                            <property name="backgroundAttachment">scroll</property>
+                                            <property name="backgroundPositionX">0%</property>
+                                            <property name="backgroundPositionY">0%</property>
+                                            <property name="backgroundRepeat">repeat</property>
+                                            <property name="fontFamily">"Century Gothic"</property>
+                                            <property name="fontSize">12pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <property name="fontStyle">normal</property>
+                                            <property name="fontVariant">normal</property>
+                                            <property name="color">black</property>
+                                            <property name="textLineThrough">none</property>
+                                            <property name="textOverline">none</property>
+                                            <property name="textUnderline">none</property>
+                                            <property name="borderBottomColor">black</property>
+                                            <property name="borderBottomStyle">none</property>
+                                            <property name="borderBottomWidth">medium</property>
+                                            <property name="borderLeftColor">black</property>
+                                            <property name="borderLeftStyle">none</property>
+                                            <property name="borderLeftWidth">medium</property>
+                                            <property name="borderRightColor">black</property>
+                                            <property name="borderRightStyle">none</property>
+                                            <property name="borderRightWidth">medium</property>
+                                            <property name="borderTopColor">black</property>
+                                            <property name="borderTopStyle">none</property>
+                                            <property name="borderTopWidth">medium</property>
+                                            <property name="marginTop">0pt</property>
+                                            <property name="marginLeft">0pt</property>
+                                            <property name="marginBottom">0pt</property>
+                                            <property name="marginRight">0pt</property>
+                                            <property name="paddingTop">1pt</property>
+                                            <property name="paddingLeft">1pt</property>
+                                            <property name="paddingBottom">1pt</property>
+                                            <property name="paddingRight">1pt</property>
+                                            <property name="textAlign">left</property>
+                                            <property name="letterSpacing">normal</property>
+                                            <property name="lineHeight">normal</property>
+                                            <property name="orphans">2</property>
+                                            <property name="textTransform">none</property>
+                                            <property name="whiteSpace">normal</property>
+                                            <property name="widows">2</property>
+                                            <property name="wordSpacing">normal</property>
+                                            <property name="display">block</property>
+                                            <property name="pageBreakAfter">auto</property>
+                                            <property name="pageBreakBefore">auto</property>
+                                            <property name="pageBreakInside">auto</property>
+                                            <property name="showIfBlank">false</property>
+                                            <property name="canShrink">false</property>
+                                            <property name="overflow">hidden</property>
+                                            <property name="resultSetColumn">CLIENT</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="283">
+                                        <grid id="120">
+                                            <column id="121">
+                                                <property name="width">1.5cm</property>
+                                            </column>
+                                            <column id="122">
+                                                <property name="width">2cm</property>
+                                            </column>
+                                            <column id="123">
+                                                <property name="width">2cm</property>
+                                            </column>
+                                            <row id="124">
+                                                <cell id="125">
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderRightWidth">thin</property>
+                                                    <data id="290">
+                                                        <property name="backgroundAttachment">scroll</property>
+                                                        <property name="backgroundPositionX">0%</property>
+                                                        <property name="backgroundPositionY">0%</property>
+                                                        <property name="backgroundRepeat">repeat</property>
+                                                        <property name="fontFamily">"Century Gothic"</property>
+                                                        <property name="fontSize">10pt</property>
+                                                        <property name="fontWeight">bold</property>
+                                                        <property name="fontStyle">normal</property>
+                                                        <property name="fontVariant">normal</property>
+                                                        <property name="color">black</property>
+                                                        <property name="textLineThrough">none</property>
+                                                        <property name="textOverline">none</property>
+                                                        <property name="textUnderline">none</property>
+                                                        <property name="borderBottomColor">black</property>
+                                                        <property name="borderBottomStyle">none</property>
+                                                        <property name="borderBottomWidth">medium</property>
+                                                        <property name="borderLeftColor">black</property>
+                                                        <property name="borderLeftStyle">none</property>
+                                                        <property name="borderLeftWidth">medium</property>
+                                                        <property name="borderRightColor">black</property>
+                                                        <property name="borderRightStyle">none</property>
+                                                        <property name="borderRightWidth">medium</property>
+                                                        <property name="borderTopColor">black</property>
+                                                        <property name="borderTopStyle">none</property>
+                                                        <property name="borderTopWidth">medium</property>
+                                                        <property name="marginTop">0pt</property>
+                                                        <property name="marginLeft">0pt</property>
+                                                        <property name="marginBottom">0pt</property>
+                                                        <property name="marginRight">0pt</property>
+                                                        <property name="paddingTop">1pt</property>
+                                                        <property name="paddingLeft">1pt</property>
+                                                        <property name="paddingBottom">1pt</property>
+                                                        <property name="paddingRight">1pt</property>
+                                                        <property name="textAlign">left</property>
+                                                        <property name="letterSpacing">normal</property>
+                                                        <property name="lineHeight">normal</property>
+                                                        <property name="orphans">2</property>
+                                                        <property name="textTransform">none</property>
+                                                        <property name="whiteSpace">normal</property>
+                                                        <property name="widows">2</property>
+                                                        <property name="wordSpacing">normal</property>
+                                                        <property name="display">block</property>
+                                                        <property name="pageBreakAfter">auto</property>
+                                                        <property name="pageBreakBefore">auto</property>
+                                                        <property name="pageBreakInside">auto</property>
+                                                        <property name="showIfBlank">false</property>
+                                                        <property name="canShrink">false</property>
+                                                        <property name="overflow">hidden</property>
+                                                        <property name="resultSetColumn">Total</property>
+                                                    </data>
+                                                </cell>
+                                                <cell id="127">
+                                                    <property name="paddingLeft">10pt</property>
+                                                    <data id="292">
+                                                        <property name="backgroundAttachment">scroll</property>
+                                                        <property name="backgroundPositionX">0%</property>
+                                                        <property name="backgroundPositionY">0%</property>
+                                                        <property name="backgroundRepeat">repeat</property>
+                                                        <property name="fontFamily">"Century Gothic"</property>
+                                                        <property name="fontSize">10pt</property>
+                                                        <property name="fontWeight">bold</property>
+                                                        <property name="fontStyle">normal</property>
+                                                        <property name="fontVariant">normal</property>
+                                                        <property name="color">#008000</property>
+                                                        <property name="textLineThrough">none</property>
+                                                        <property name="textOverline">none</property>
+                                                        <property name="textUnderline">none</property>
+                                                        <property name="borderBottomColor">black</property>
+                                                        <property name="borderBottomStyle">none</property>
+                                                        <property name="borderBottomWidth">medium</property>
+                                                        <property name="borderLeftColor">black</property>
+                                                        <property name="borderLeftStyle">none</property>
+                                                        <property name="borderLeftWidth">medium</property>
+                                                        <property name="borderRightColor">black</property>
+                                                        <property name="borderRightStyle">none</property>
+                                                        <property name="borderRightWidth">medium</property>
+                                                        <property name="borderTopColor">black</property>
+                                                        <property name="borderTopStyle">none</property>
+                                                        <property name="borderTopWidth">medium</property>
+                                                        <property name="marginTop">0pt</property>
+                                                        <property name="marginLeft">0pt</property>
+                                                        <property name="marginBottom">0pt</property>
+                                                        <property name="marginRight">0pt</property>
+                                                        <property name="paddingTop">1pt</property>
+                                                        <property name="paddingLeft">1pt</property>
+                                                        <property name="paddingBottom">1pt</property>
+                                                        <property name="paddingRight">1pt</property>
+                                                        <property name="textAlign">left</property>
+                                                        <property name="letterSpacing">normal</property>
+                                                        <property name="lineHeight">normal</property>
+                                                        <property name="orphans">2</property>
+                                                        <property name="textTransform">none</property>
+                                                        <property name="whiteSpace">normal</property>
+                                                        <property name="widows">2</property>
+                                                        <property name="wordSpacing">normal</property>
+                                                        <property name="display">block</property>
+                                                        <property name="pageBreakAfter">auto</property>
+                                                        <property name="pageBreakBefore">auto</property>
+                                                        <property name="pageBreakInside">auto</property>
+                                                        <property name="showIfBlank">false</property>
+                                                        <property name="canShrink">false</property>
+                                                        <property name="overflow">hidden</property>
+                                                        <property name="resultSetColumn">TotalPass</property>
+                                                    </data>
+                                                </cell>
+                                                <cell id="129">
+                                                    <property name="backgroundAttachment">scroll</property>
+                                                    <property name="backgroundImageType">url</property>
+                                                    <property name="backgroundPositionX">0%</property>
+                                                    <property name="backgroundPositionY">0%</property>
+                                                    <property name="backgroundRepeat">repeat</property>
+                                                    <property name="backgroundSizeHeight">auto</property>
+                                                    <property name="backgroundSizeWidth">auto</property>
+                                                    <property name="fontFamily">serif</property>
+                                                    <property name="fontSize">10pt</property>
+                                                    <property name="fontWeight">normal</property>
+                                                    <property name="fontStyle">normal</property>
+                                                    <property name="fontVariant">normal</property>
+                                                    <property name="color">black</property>
+                                                    <property name="textLineThrough">none</property>
+                                                    <property name="textOverline">none</property>
+                                                    <property name="textUnderline">none</property>
+                                                    <property name="borderBottomColor">black</property>
+                                                    <property name="borderBottomStyle">none</property>
+                                                    <property name="borderBottomWidth">medium</property>
+                                                    <property name="borderLeftColor">black</property>
+                                                    <property name="borderLeftStyle">none</property>
+                                                    <property name="borderLeftWidth">medium</property>
+                                                    <property name="borderRightColor">black</property>
+                                                    <property name="borderRightStyle">none</property>
+                                                    <property name="borderRightWidth">medium</property>
+                                                    <property name="borderTopColor">black</property>
+                                                    <property name="borderTopStyle">none</property>
+                                                    <property name="borderTopWidth">medium</property>
+                                                    <property name="marginTop">0pt</property>
+                                                    <property name="marginLeft">0pt</property>
+                                                    <property name="marginBottom">0pt</property>
+                                                    <property name="marginRight">0pt</property>
+                                                    <property name="paddingTop">1pt</property>
+                                                    <property name="paddingLeft">10pt</property>
+                                                    <property name="paddingBottom">1pt</property>
+                                                    <property name="paddingRight">1pt</property>
+                                                    <property name="textIndent">0em</property>
+                                                    <property name="letterSpacing">normal</property>
+                                                    <property name="lineHeight">normal</property>
+                                                    <property name="orphans">2</property>
+                                                    <property name="textTransform">none</property>
+                                                    <property name="whiteSpace">normal</property>
+                                                    <property name="widows">2</property>
+                                                    <property name="wordSpacing">normal</property>
+                                                    <property name="display">block</property>
+                                                    <property name="pageBreakAfter">auto</property>
+                                                    <property name="pageBreakBefore">auto</property>
+                                                    <property name="pageBreakInside">auto</property>
+                                                    <property name="showIfBlank">false</property>
+                                                    <property name="canShrink">false</property>
+                                                    <property name="overflow">hidden</property>
+                                                    <data id="293">
+                                                        <property name="backgroundAttachment">scroll</property>
+                                                        <property name="backgroundPositionX">0%</property>
+                                                        <property name="backgroundPositionY">0%</property>
+                                                        <property name="backgroundRepeat">repeat</property>
+                                                        <property name="fontFamily">"Century Gothic"</property>
+                                                        <property name="fontSize">10pt</property>
+                                                        <property name="fontWeight">bold</property>
+                                                        <property name="fontStyle">normal</property>
+                                                        <property name="fontVariant">normal</property>
+                                                        <property name="color">#FF0000</property>
+                                                        <property name="textLineThrough">none</property>
+                                                        <property name="textOverline">none</property>
+                                                        <property name="textUnderline">none</property>
+                                                        <property name="borderBottomColor">black</property>
+                                                        <property name="borderBottomStyle">none</property>
+                                                        <property name="borderBottomWidth">medium</property>
+                                                        <property name="borderLeftColor">black</property>
+                                                        <property name="borderLeftStyle">none</property>
+                                                        <property name="borderLeftWidth">medium</property>
+                                                        <property name="borderRightColor">black</property>
+                                                        <property name="borderRightStyle">none</property>
+                                                        <property name="borderRightWidth">medium</property>
+                                                        <property name="borderTopColor">black</property>
+                                                        <property name="borderTopStyle">none</property>
+                                                        <property name="borderTopWidth">medium</property>
+                                                        <property name="marginTop">0pt</property>
+                                                        <property name="marginLeft">0pt</property>
+                                                        <property name="marginBottom">0pt</property>
+                                                        <property name="marginRight">0pt</property>
+                                                        <property name="paddingTop">1pt</property>
+                                                        <property name="paddingLeft">1pt</property>
+                                                        <property name="paddingBottom">1pt</property>
+                                                        <property name="paddingRight">1pt</property>
+                                                        <property name="textAlign">left</property>
+                                                        <property name="letterSpacing">normal</property>
+                                                        <property name="lineHeight">normal</property>
+                                                        <property name="orphans">2</property>
+                                                        <property name="textTransform">none</property>
+                                                        <property name="whiteSpace">normal</property>
+                                                        <property name="widows">2</property>
+                                                        <property name="wordSpacing">normal</property>
+                                                        <property name="display">block</property>
+                                                        <property name="pageBreakAfter">auto</property>
+                                                        <property name="pageBreakBefore">auto</property>
+                                                        <property name="pageBreakInside">auto</property>
+                                                        <property name="showIfBlank">false</property>
+                                                        <property name="canShrink">false</property>
+                                                        <property name="overflow">hidden</property>
+                                                        <property name="resultSetColumn">TotalFail</property>
+                                                    </data>
+                                                </cell>
+                                            </row>
+                                            <row id="131">
+                                                <cell id="132">
+                                                    <property name="paddingTop">2.5pt</property>
+                                                    <text id="133">
+                                                        <property name="fontFamily">"Century Gothic"</property>
+                                                        <property name="fontSize">5pt</property>
+                                                        <property name="fontWeight">bold</property>
+                                                        <property name="color">#808080</property>
+                                                        <property name="contentType">auto</property>
+                                                        <text-property name="content"><![CDATA[Total tests]]></text-property>
+                                                    </text>
+                                                </cell>
+                                                <cell id="134">
+                                                    <property name="paddingLeft">10pt</property>
+                                                    <grid id="135">
+                                                        <column id="136">
+                                                            <property name="width">0.5cm</property>
+                                                        </column>
+                                                        <column id="137"/>
+                                                        <row id="138">
+                                                            <cell id="139">
+                                                                <property name="paddingTop">2.5pt</property>
+                                                                <property name="paddingBottom">5pt</property>
+                                                                <property name="paddingRight">1pt</property>
+                                                                <text id="294">
+                                                                    <property name="backgroundAttachment">scroll</property>
+                                                                    <property name="backgroundColor">#008000</property>
+                                                                    <property name="backgroundPositionX">0%</property>
+                                                                    <property name="backgroundPositionY">0%</property>
+                                                                    <property name="backgroundRepeat">repeat</property>
+                                                                    <property name="fontFamily">"Century Gothic"</property>
+                                                                    <property name="fontSize">2pt</property>
+                                                                    <property name="fontWeight">normal</property>
+                                                                    <property name="fontStyle">normal</property>
+                                                                    <property name="fontVariant">normal</property>
+                                                                    <property name="color">#808080</property>
+                                                                    <property name="textLineThrough">none</property>
+                                                                    <property name="textOverline">none</property>
+                                                                    <property name="textUnderline">none</property>
+                                                                    <property name="borderBottomColor">black</property>
+                                                                    <property name="borderBottomStyle">none</property>
+                                                                    <property name="borderBottomWidth">medium</property>
+                                                                    <property name="borderLeftColor">black</property>
+                                                                    <property name="borderLeftStyle">none</property>
+                                                                    <property name="borderLeftWidth">medium</property>
+                                                                    <property name="borderRightColor">black</property>
+                                                                    <property name="borderRightStyle">none</property>
+                                                                    <property name="borderRightWidth">medium</property>
+                                                                    <property name="borderTopColor">black</property>
+                                                                    <property name="borderTopStyle">none</property>
+                                                                    <property name="borderTopWidth">medium</property>
+                                                                    <property name="marginTop">0pt</property>
+                                                                    <property name="marginLeft">0pt</property>
+                                                                    <property name="marginBottom">0pt</property>
+                                                                    <property name="marginRight">0pt</property>
+                                                                    <property name="paddingTop">1pt</property>
+                                                                    <property name="paddingLeft">1pt</property>
+                                                                    <property name="paddingBottom">1pt</property>
+                                                                    <property name="paddingRight">1pt</property>
+                                                                    <property name="textAlign">left</property>
+                                                                    <property name="textIndent">0em</property>
+                                                                    <property name="letterSpacing">normal</property>
+                                                                    <property name="lineHeight">normal</property>
+                                                                    <property name="orphans">2</property>
+                                                                    <property name="textTransform">none</property>
+                                                                    <property name="whiteSpace">normal</property>
+                                                                    <property name="widows">2</property>
+                                                                    <property name="wordSpacing">normal</property>
+                                                                    <property name="display">block</property>
+                                                                    <property name="pageBreakAfter">auto</property>
+                                                                    <property name="pageBreakBefore">auto</property>
+                                                                    <property name="pageBreakInside">auto</property>
+                                                                    <property name="showIfBlank">false</property>
+                                                                    <property name="canShrink">false</property>
+                                                                    <property name="overflow">hidden</property>
+                                                                    <property name="contentType">auto</property>
+                                                                    <text-property name="content"><![CDATA[ ]]></text-property>
+                                                                </text>
+                                                            </cell>
+                                                            <cell id="141">
+                                                                <property name="textAlign">left</property>
+                                                                <text id="142">
+                                                                    <property name="fontFamily">"Century Gothic"</property>
+                                                                    <property name="fontSize">5pt</property>
+                                                                    <property name="color">#808080</property>
+                                                                    <property name="contentType">auto</property>
+                                                                    <text-property name="content"><![CDATA[Passed]]></text-property>
+                                                                </text>
+                                                            </cell>
+                                                        </row>
+                                                    </grid>
+                                                </cell>
+                                                <cell id="143">
+                                                    <property name="paddingLeft">10pt</property>
+                                                    <grid id="296">
+                                                        <column id="297">
+                                                            <property name="width">0.5cm</property>
+                                                        </column>
+                                                        <column id="298"/>
+                                                        <row id="299">
+                                                            <cell id="300">
+                                                                <property name="backgroundAttachment">scroll</property>
+                                                                <property name="backgroundImageType">url</property>
+                                                                <property name="backgroundPositionX">0%</property>
+                                                                <property name="backgroundPositionY">0%</property>
+                                                                <property name="backgroundRepeat">repeat</property>
+                                                                <property name="backgroundSizeHeight">auto</property>
+                                                                <property name="backgroundSizeWidth">auto</property>
+                                                                <property name="fontFamily">serif</property>
+                                                                <property name="fontSize">10pt</property>
+                                                                <property name="fontWeight">normal</property>
+                                                                <property name="fontStyle">normal</property>
+                                                                <property name="fontVariant">normal</property>
+                                                                <property name="color">black</property>
+                                                                <property name="textLineThrough">none</property>
+                                                                <property name="textOverline">none</property>
+                                                                <property name="textUnderline">none</property>
+                                                                <property name="borderBottomColor">black</property>
+                                                                <property name="borderBottomStyle">none</property>
+                                                                <property name="borderBottomWidth">medium</property>
+                                                                <property name="borderLeftColor">black</property>
+                                                                <property name="borderLeftStyle">none</property>
+                                                                <property name="borderLeftWidth">medium</property>
+                                                                <property name="borderRightColor">black</property>
+                                                                <property name="borderRightStyle">none</property>
+                                                                <property name="borderRightWidth">medium</property>
+                                                                <property name="borderTopColor">black</property>
+                                                                <property name="borderTopStyle">none</property>
+                                                                <property name="borderTopWidth">medium</property>
+                                                                <property name="marginTop">0pt</property>
+                                                                <property name="marginLeft">0pt</property>
+                                                                <property name="marginBottom">0pt</property>
+                                                                <property name="marginRight">0pt</property>
+                                                                <property name="paddingTop">2.5pt</property>
+                                                                <property name="paddingLeft">1pt</property>
+                                                                <property name="paddingBottom">5pt</property>
+                                                                <property name="paddingRight">1pt</property>
+                                                                <property name="textIndent">0em</property>
+                                                                <property name="letterSpacing">normal</property>
+                                                                <property name="lineHeight">normal</property>
+                                                                <property name="orphans">2</property>
+                                                                <property name="textTransform">none</property>
+                                                                <property name="whiteSpace">normal</property>
+                                                                <property name="widows">2</property>
+                                                                <property name="wordSpacing">normal</property>
+                                                                <property name="display">block</property>
+                                                                <property name="pageBreakAfter">auto</property>
+                                                                <property name="pageBreakBefore">auto</property>
+                                                                <property name="pageBreakInside">auto</property>
+                                                                <property name="showIfBlank">false</property>
+                                                                <property name="canShrink">false</property>
+                                                                <property name="overflow">hidden</property>
+                                                                <text id="301">
+                                                                    <property name="backgroundAttachment">scroll</property>
+                                                                    <property name="backgroundColor">#FF0000</property>
+                                                                    <property name="backgroundPositionX">0%</property>
+                                                                    <property name="backgroundPositionY">0%</property>
+                                                                    <property name="backgroundRepeat">repeat</property>
+                                                                    <property name="fontFamily">"Century Gothic"</property>
+                                                                    <property name="fontSize">2pt</property>
+                                                                    <property name="fontWeight">normal</property>
+                                                                    <property name="fontStyle">normal</property>
+                                                                    <property name="fontVariant">normal</property>
+                                                                    <property name="color">#808080</property>
+                                                                    <property name="textLineThrough">none</property>
+                                                                    <property name="textOverline">none</property>
+                                                                    <property name="textUnderline">none</property>
+                                                                    <property name="borderBottomColor">black</property>
+                                                                    <property name="borderBottomStyle">none</property>
+                                                                    <property name="borderBottomWidth">medium</property>
+                                                                    <property name="borderLeftColor">black</property>
+                                                                    <property name="borderLeftStyle">none</property>
+                                                                    <property name="borderLeftWidth">medium</property>
+                                                                    <property name="borderRightColor">black</property>
+                                                                    <property name="borderRightStyle">none</property>
+                                                                    <property name="borderRightWidth">medium</property>
+                                                                    <property name="borderTopColor">black</property>
+                                                                    <property name="borderTopStyle">none</property>
+                                                                    <property name="borderTopWidth">medium</property>
+                                                                    <property name="marginTop">0pt</property>
+                                                                    <property name="marginLeft">0pt</property>
+                                                                    <property name="marginBottom">0pt</property>
+                                                                    <property name="marginRight">0pt</property>
+                                                                    <property name="paddingTop">1pt</property>
+                                                                    <property name="paddingLeft">1pt</property>
+                                                                    <property name="paddingBottom">1pt</property>
+                                                                    <property name="paddingRight">1pt</property>
+                                                                    <property name="textAlign">left</property>
+                                                                    <property name="textIndent">0em</property>
+                                                                    <property name="letterSpacing">normal</property>
+                                                                    <property name="lineHeight">normal</property>
+                                                                    <property name="orphans">2</property>
+                                                                    <property name="textTransform">none</property>
+                                                                    <property name="whiteSpace">normal</property>
+                                                                    <property name="widows">2</property>
+                                                                    <property name="wordSpacing">normal</property>
+                                                                    <property name="display">block</property>
+                                                                    <property name="pageBreakAfter">auto</property>
+                                                                    <property name="pageBreakBefore">auto</property>
+                                                                    <property name="pageBreakInside">auto</property>
+                                                                    <property name="showIfBlank">false</property>
+                                                                    <property name="canShrink">false</property>
+                                                                    <property name="overflow">hidden</property>
+                                                                    <property name="contentType">auto</property>
+                                                                    <text-property name="content"><![CDATA[ ]]></text-property>
+                                                                </text>
+                                                            </cell>
+                                                            <cell id="302">
+                                                                <property name="textAlign">left</property>
+                                                                <text id="303">
+                                                                    <property name="fontFamily">"Century Gothic"</property>
+                                                                    <property name="fontSize">5pt</property>
+                                                                    <property name="color">#808080</property>
+                                                                    <property name="contentType">auto</property>
+                                                                    <text-property name="content"><![CDATA[Failed]]></text-property>
+                                                                </text>
+                                                            </cell>
+                                                        </row>
+                                                    </grid>
+                                                </cell>
+                                            </row>
+                                        </grid>
+                                    </cell>
+                                </row>
+                            </header>
+                        </group>
+                    </table>
+                </cell>
+            </row>
+            <row id="307">
+                <property name="pageBreakBefore">always</property>
+                <cell id="308"/>
+            </row>
+        </grid>
+        <table id="309">
+            <property name="dataSet">testSumaryReport</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">CLIENT</property>
+                    <text-property name="displayName">CLIENT</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CLIENT"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">TC</property>
+                    <text-property name="displayName">TC</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TC"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">TC_DESC</property>
+                    <text-property name="displayName">TC_DESC</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TC_DESC"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">TC_TGT_EXEC_STATUS</property>
+                    <text-property name="displayName">TC_TGT_EXEC_STATUS</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TC_TGT_EXEC_STATUS"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">TC_REF_EXEC_STATUS</property>
+                    <text-property name="displayName">TC_REF_EXEC_STATUS</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TC_REF_EXEC_STATUS"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">TC_OUTPUT_FILE_NAME</property>
+                    <text-property name="displayName">TC_OUTPUT_FILE_NAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TC_OUTPUT_FILE_NAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">TC_COMPARE_STATUS</property>
+                    <text-property name="displayName">TC_COMPARE_STATUS</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TC_COMPARE_STATUS"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">TC_ERR_DESC</property>
+                    <text-property name="displayName">TC_ERR_DESC</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TC_ERR_DESC"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="353">
+                <property name="width">1cm</property>
+            </column>
+            <column id="354">
+                <property name="width">5cm</property>
+            </column>
+            <column id="356"/>
+            <column id="357"/>
+            <column id="359"/>
+            <column id="360"/>
+            <header>
+                <row id="310">
+                    <property name="fontFamily">"Century Gothic"</property>
+                    <property name="fontSize">6pt</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="textAlign">left</property>
+                    <cell id="311">
+                        <label id="312">
+                            <text-property name="text">CLIENT</text-property>
+                        </label>
+                    </cell>
+                    <cell id="313">
+                        <label id="314">
+                            <text-property name="text">TC_ID</text-property>
+                        </label>
+                    </cell>
+                    <cell id="317">
+                        <label id="318">
+                            <text-property name="text">TC_TGT_EXEC_STATUS</text-property>
+                        </label>
+                    </cell>
+                    <cell id="319">
+                        <label id="320">
+                            <text-property name="text">TC_REF_EXEC_STATUS</text-property>
+                        </label>
+                    </cell>
+                    <cell id="323">
+                        <label id="324">
+                            <text-property name="text">TC_COMPARE_STATUS</text-property>
+                        </label>
+                    </cell>
+                    <cell id="325">
+                        <label id="326">
+                            <text-property name="text">TC_ERR_DESC</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="327">
+                    <property name="fontFamily">"Century Gothic"</property>
+                    <property name="fontSize">5pt</property>
+                    <cell id="328">
+                        <data id="329">
+                            <property name="resultSetColumn">CLIENT</property>
+                        </data>
+                    </cell>
+                    <cell id="330">
+                        <data id="331">
+                            <property name="resultSetColumn">TC</property>
+                        </data>
+                    </cell>
+                    <cell id="334">
+                        <data id="335">
+                            <property name="resultSetColumn">TC_TGT_EXEC_STATUS</property>
+                        </data>
+                    </cell>
+                    <cell id="336">
+                        <data id="337">
+                            <property name="resultSetColumn">TC_REF_EXEC_STATUS</property>
+                        </data>
+                    </cell>
+                    <cell id="340">
+                        <data id="341">
+                            <property name="resultSetColumn">TC_COMPARE_STATUS</property>
+                        </data>
+                    </cell>
+                    <cell id="342">
+                        <data id="343">
+                            <property name="resultSetColumn">TC_ERR_DESC</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="344">
+                    <cell id="345"/>
+                    <cell id="346"/>
+                    <cell id="348"/>
+                    <cell id="349"/>
+                    <cell id="351"/>
+                    <cell id="352"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>
